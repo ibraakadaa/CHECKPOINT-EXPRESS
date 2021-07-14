@@ -1,0 +1,68 @@
+body {
+  color: darkslategrey;
+  font-family: sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  background:aqua; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    aqua,
+    aquamarine
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    aqua,
+    aquamarine
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+a {
+  color: white;
+  text-decoration: "none";
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr {
+  background-color: greenyellow;
+}
+p {
+  text-indent: 50px;
+  text-align:center;
+  line-height: 40px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
