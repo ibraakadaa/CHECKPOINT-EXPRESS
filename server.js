@@ -16,7 +16,7 @@ app.get('/outofservice.html',(req,res)=>{
 })
 app.use((req,res,next)=>{
     console.log("A new request received at "+ days[day] +" "+ hours +" H" );
-(day === 0 || day === 6) || (hours >9 || hours <= 17)  ? // day[0-6] // hours[0-23]
+(day === 0 || day === 6) || (hours <9 || hours >= 17)  ? // day[0-6] // hours[0-23]
 // res.status(404).send('<h1>Only available during working hours (Monday to Friday,  from 9 to 17)</h1>')
 res.redirect('/outofservice.html')  // redirect to an html file with new path 
 :next();   // to the next middelware! 
