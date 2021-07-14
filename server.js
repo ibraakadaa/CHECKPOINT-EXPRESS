@@ -12,7 +12,7 @@ const day= today.getDay();
 const hours=today.getHours();
 const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 app.get('/outofservice.html',(req,res)=>{
-    res.sendFile(path.join(__dirname,'public','outofservice.html')) 
+    res.sendFile(path.join(__dirname,'html','outofservice.html')) 
 })
 app.use((req,res,next)=>{
     console.log("A new request received at "+ days[day] +" "+ hours +" H" );
@@ -21,12 +21,15 @@ app.use((req,res,next)=>{
 res.redirect('/outofservice.html')  // redirect to an html file with new path 
 :next();   // to the next middelware! 
 })
-//rendering static html files ( public: folder that contains our html files and take the index.html as first rendering page )
-app.use(express.static(__dirname+'/public'));
-app.use('/styleSheets',express.static(__dirname +'/styleSheets'));
+//rendering static html files ( html: folder that contains our html files and take the index.html as first rendering page )
+app.use('/',express.static(__dirname+'/html'));
+app.use('/css',express.static(__dirname+'/styleSheets'));
+
+
+//app.use('/styleSheets',express.static(__dirname +'/styleSheets'));
 //rendering css style 
 //app.use(express.static('styleSheets'));
-// create the port variable
+// create the port variable 
 const port=5000
 //listen to the port
 app.listen(port,(err)=>{
